@@ -21,6 +21,7 @@ order_payments as (
 fct_orders as (
     select
         orders.order_id,
+        orders.order_date,
         orders.customer_id,
         order_payments.amount
     from orders
