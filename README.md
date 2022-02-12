@@ -16,6 +16,6 @@ A quick summary of my learnings from the course:
 
 - It allows you to run generic tests on your source data and models (unique, not_null, accepted_values and relationships) as well as configure your own tests in YAML files - these can be run using a variation of `dbt test`
 
-- It allows you to define the lineage of your transformations from the source data to your final models via Jinja templating `{{ source('schema', 'table_name') }}` and `{{ ref(name_of_your_model) }}` which encourages modularity of your code, and has the awesome benefit of being able to produce a Directed Acyclic Graph (DAG) of the transformation pipeline such as the one below, via the commands `dbt docs generate` followed by `dbt docs serve`:
+- It allows you to define the lineage of your transformations from the source data to your final models via Jinja templating `{{ source('schema', 'table_name') }}` and `{{ ref(name_of_your_model) }}` which encourages modularity of your code. It also has the awesome benefit of being able to produce a Directed Acyclic Graph (DAG) of the transformation pipeline such as the one below, via the commands `dbt docs generate` followed by `dbt docs serve`:
 
 ![Lineage graph of sample data from the dbt Fundamentals course](images/DAG.png)
