@@ -9,6 +9,10 @@ models:
         tests:
           - unique
           - not_null
+      - name: first_name
+        description: First name of the customer.
+      - name: last_name
+        description: Last name of the customer.
 
   - name: stg_orders
     description: Staged orders data from the jaffle shop application.
@@ -18,6 +22,8 @@ models:
         tests:
           - unique
           - not_null
+      - name: order_date
+        description: Date when the order was made.
       - name: status
         description: "{{ doc('order_status') }}"
         tests:
